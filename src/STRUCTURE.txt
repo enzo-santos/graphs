@@ -1,0 +1,20 @@
+# Estrutura
+
+─ Node
+
+─ Edge
+
+─ AbstractGraph
+    ├─ ExtensibleAbstractGraph
+    │    └─ Graph
+    │         ├─ DirectedGraph
+    │         └─ UndirectedGraph
+    ├─ ListGraph
+    └─ MatrixGraph
+
+─ NodeVisitor
+    │
+─ Algorithm
+    └─ NodeVisitorAlgorithm
+         ├─ CormenDFSAlgorithm
+         └─ SedgewickDFSAlgorithm
