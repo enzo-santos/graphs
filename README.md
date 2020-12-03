@@ -42,5 +42,7 @@ Para inserir uma aresta, utiliza-se o método `addEdge`.
 Após a inserção de arestas, pode-se conferir propriedades dos grafos, como vértices e arestas, ou calcular vizinhos de determinado vértice.
 
     graph.getValues();          // ["a", "b", "c", "d"]
-    graph.getEdges();           // [Edge("a", "b", 1), Edge("a", "c", 2), Edge("b", "c", 2), Edge("c", "d", 2)]
+    graph.getEdges();           // [Edge("a", "b", 1), Edge("a", "c", 1), Edge("b", "c", 2), Edge("c", "d", 1)]
     graph.getNeighbors("b");    // {"a": 1, "c": 2}
+
+Os exemplos de utilização dos algoritmos de busca estão no diretório **/src/test/java**.
