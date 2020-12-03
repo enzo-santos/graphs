@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'jacoco'
 }
 
 group 'com.github.enzo_santos'
@@ -12,3 +13,12 @@ repositories {
 dependencies {
     testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0-M2'
 }
+
+jacocoTestReport {
+    reports {
+        xml.enabled = true
+        html.enabled = true
+    }
+}
+
+check.dependsOn jacocoTestReport
