@@ -2,6 +2,10 @@
 
 Implementação de alguns algoritmos de teoria de grafos.
 
+
+[![Build Status](https://travis-ci.org/enzo-santos/graphs.svg?branch=master)](https://travis-ci.org/enzo-santos/graphs) [![codecov](https://codecov.io/gh/enzo-santos/graphs/branch/master/graph/badge.svg?token=QARUGJ0L2M)](https://codecov.io/gh/enzo-santos/graphs)
+
+
 ## Implementações
 
 ### Grafos
