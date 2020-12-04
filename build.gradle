@@ -10,8 +10,12 @@ repositories {
     mavenCentral()
 }
 
+test {
+    useJUnitPlatform()
+}
+
 dependencies {
-    testCompile 'org.junit.jupiter:junit-jupiter-api:5.0.0-M2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.5.2'
 }
 
 jacocoTestReport {
@@ -21,4 +25,4 @@ jacocoTestReport {
     }
 }
 
-check.dependsOn jacocoTestReport
+test.finalizedBy jacocoTestReport

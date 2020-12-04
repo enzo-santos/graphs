@@ -34,7 +34,7 @@ Para criar um grafo, é possível utilizar as classes `ListGraph` ou `MatrixGrap
    
 Para inserir arestas nesse grafo, podem-se usar as classes `DirectedGraph` ou `UndirectedGraph`.
 
-    final Graph<String> graph = new UndirectedGraph<>(abstractGraph);
+    final Graph<String> graph = new DirectedGraph<>(abstractGraph);
     
 Para inserir uma aresta, utiliza-se o método `addEdge`.
 
