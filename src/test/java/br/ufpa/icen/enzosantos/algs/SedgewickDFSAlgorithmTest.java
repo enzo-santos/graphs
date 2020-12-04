@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class SedgewickDFSAlgorithmTest {
     @Test
@@ -26,6 +27,7 @@ class SedgewickDFSAlgorithmTest {
         graph.addEdge("d", "f");
 
         final SedgewickDFSAlgorithm<String> dfs = new SedgewickDFSAlgorithm<>(graph);
+        assertThrows(IllegalStateException.class, dfs::getCount);
         dfs.run("a");
         assertEquals(6, dfs.getCount());
     }

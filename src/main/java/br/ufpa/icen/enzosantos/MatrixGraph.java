@@ -35,11 +35,7 @@ public class MatrixGraph<V> extends AbstractGraph<V> {
      * @throws IllegalArgumentException se o vértice não está presente nesse grafo.
      */
     protected int indexOf(final Node<V> node) {
-        final int index = nodes.indexOf(node);
-        if (index == -1) {
-            throw new IllegalArgumentException("node is not present in this graph");
-        }
-        return index;
+        return nodes.indexOf(node);
     }
 
     /**
