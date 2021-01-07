@@ -16,4 +16,9 @@ public class DirectedGraph<V> extends Graph<V> {
     public boolean addEdge(final V fromValue, final V toValue, final int weight) {
         return onEdgeAdded(fromValue, toValue, weight);
     }
+
+    @Override
+    public Graph<V> copyDirection(AbstractGraph<V> to) {
+        return to == null ? null : new DirectedGraph<>(to);
+    }
 }

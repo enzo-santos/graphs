@@ -18,6 +18,8 @@ Implementação de alguns algoritmos de teoria de grafos.
 
 - [x] Grafo por lista de adjacências
 
+- [x] Grafo transposto
+
 ### Algoritmos de busca
 
  - [x] Breadth-first search (Cormen et al.)
@@ -25,6 +27,8 @@ Implementação de alguns algoritmos de teoria de grafos.
  - [x] Depth-first search (Cormen et al.)
  
  - [x] Depth-first search (Sedgewick)
+ 
+ - [x] Strongly-connected-components search (Cormen et al.)
  
 ## Uso
 
@@ -47,6 +51,7 @@ Após a inserção de arestas, pode-se conferir propriedades dos grafos, como v�
 
     graph.getValues();          // ["a", "b", "c", "d"]
     graph.getEdges();           // [Edge("a", "b", 1), Edge("a", "c", 1), Edge("b", "c", 2), Edge("c", "d", 1)]
-    graph.getNeighbors("b");    // {"a": 1, "c": 2}
+    graph.getNeighbors("a");    // {"b": 1, "c": 1}
+    graph.getNeighbors("b");    // {"c": 2}
 
-Os exemplos de utilização dos algoritmos de busca estão no diretório **/src/test/java**.
+Os exemplos de utilização dos algoritmos de busca estão no diretório **src/test/java**.

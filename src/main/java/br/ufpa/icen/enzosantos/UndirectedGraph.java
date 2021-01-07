@@ -16,4 +16,9 @@ public class UndirectedGraph<V> extends Graph<V> {
     public boolean addEdge(final V fromValue, final V toValue, final int weight) {
         return onEdgeAdded(fromValue, toValue, weight) && onEdgeAdded(toValue, fromValue, weight);
     }
+
+    @Override
+    public Graph<V> copyDirection(AbstractGraph<V> to) {
+        return to == null ? null : new UndirectedGraph<>(to);
+    }
 }

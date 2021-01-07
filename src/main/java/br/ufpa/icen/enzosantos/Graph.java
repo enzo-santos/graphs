@@ -48,19 +48,5 @@ public abstract class Graph<V> extends ExtensibleAbstractGraph<V> {
      * @param to o grafo abstrato cuja direcionamento das arestas será a mesma desse grafo.
      * @return o grafo abstrato com o novo direcionamento.
      */
-    public Graph<V> copyDirection(final AbstractGraph<V> to) {
-        if (to == null) {
-            return null;
-        }
-
-        if (this instanceof DirectedGraph) {
-            return new DirectedGraph<>(to);
-        }
-
-        if (this instanceof UndirectedGraph) {
-            return new UndirectedGraph<>(to);
-        }
-
-        throw new IllegalStateException("copyDirection has an invalid receiver");
-    }
+    abstract public Graph<V> copyDirection(final AbstractGraph<V> to);
 }

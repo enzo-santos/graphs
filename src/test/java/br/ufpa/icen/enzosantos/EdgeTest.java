@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 class EdgeTest {
-
+    @SuppressWarnings("AssertBetweenInconvertibleTypes")
     @Test
     void testEquals() {
         final Edge<String> e0 = new Edge<>("a", "b", 1);

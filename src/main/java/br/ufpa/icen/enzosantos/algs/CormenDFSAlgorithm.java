@@ -13,7 +13,7 @@ public class CormenDFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
     /**
      * O tempo atual no contexto do algoritmo.
      */
-    private int time = 0;
+    protected int time = 0;
 
     /**
      * Constrói um algoritmo DFS por Cormen et. al. baseado em um grafo.
