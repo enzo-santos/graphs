@@ -23,11 +23,6 @@ public abstract class NodeVisitorAlgorithm<V> implements NodeVisitor<V>, Algorit
         this.graph = graph;
     }
 
-    @Override
-    public boolean shouldVisit(final V neighbor) {
-        return true;
-    }
-
     /**
      * Percorre o grafo começando em um determinado vértice.
      *

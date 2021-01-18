@@ -43,7 +43,6 @@ public class ListGraph<V> extends AbstractGraph<V> {
         for (var mapEntry : this.map.entrySet()) {
             final Node<V> fromNode = mapEntry.getKey();
             final Set<Node<V>> neighbors = mapEntry.getValue();
-            if (neighbors == null) continue;
             for (final Node<V> neighbor : neighbors) {
                 final WeightedNode<V> weightedNode = (WeightedNode<V>) neighbor;
                 edges.add(new Edge<>(fromNode.value, weightedNode.value, weightedNode.weight));

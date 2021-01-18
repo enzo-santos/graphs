@@ -5,7 +5,7 @@ import br.ufpa.icen.enzosantos.Graph;
 import java.util.*;
 
 /**
- * Representa um algoritmo Depth-First-Search por Cormen et. al modificado.
+ * Representa um algoritmo DFS por Cormen et al. que suporta a descoberta de componentes conectados.
  * <p>
  * Um novo grafo será criado para a DFS. Ao percorrer cada vértice do novo grafo,
  * serão considerados os tempos finais de forma decrescente dos vértices do grafo original.
@@ -13,9 +13,9 @@ import java.util.*;
  * @param <V> o tipo do conteúdo a ser armazenado nos vértices a serem visitados.
  */
 public class CormenConnectedComponentsAlgorithm<V> extends CormenDFSAlgorithm<V> {
-    LinkedList<Set<V>> connectedComponents = new LinkedList<>();
+    private LinkedList<Set<V>> connectedComponents = new LinkedList<>();
 
-    final Graph<V> originalGraph;
+    private final Graph<V> originalGraph;
 
     /**
      * Constrói um algoritmo DFS por Cormen et. al. que encontra componentes conectados.

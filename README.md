@@ -30,6 +30,8 @@ Implementação de alguns algoritmos de teoria de grafos.
  
  - [x] Strongly-connected-components search (Cormen et al.)
  
+ - [x] Topological sort (Cormen et al.)
+ 
 ## Uso
 
 Para criar um grafo, é possível utilizar as classes `ListGraph` ou `MatrixGraph`.

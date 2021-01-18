@@ -49,10 +49,6 @@ public class SedgewickDFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
 
     @Override
     public boolean shouldVisit(final V neighbor) {
-        if (!super.shouldVisit(neighbor)) {
-            return false;
-        }
-
         return !visited.getOrDefault(neighbor, false);
     }
 
