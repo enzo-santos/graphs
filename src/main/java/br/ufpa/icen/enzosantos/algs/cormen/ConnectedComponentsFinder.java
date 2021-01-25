@@ -1,7 +1,8 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Graph;
 import br.ufpa.icen.enzosantos.TransposedGraph;
+import br.ufpa.icen.enzosantos.algs.Algorithm;
 
 import java.util.Comparator;
 import java.util.List;
@@ -12,7 +13,7 @@ import java.util.Set;
  *
  * @param <V> o tipo do conteúdo a ser armazenado nos vértices desse grafo.
  */
-public class CormenConnectedComponentsFinder<V> implements Algorithm<V> {
+public class ConnectedComponentsFinder<V> implements Algorithm<V> {
     private final Graph<V> graph;
 
     /**
@@ -20,7 +21,7 @@ public class CormenConnectedComponentsFinder<V> implements Algorithm<V> {
      *
      * @param graph o grafo no qual esse algoritmo será executado.
      */
-    public CormenConnectedComponentsFinder(final Graph<V> graph) {
+    public ConnectedComponentsFinder(final Graph<V> graph) {
         this.graph = graph;
     }
 
@@ -29,7 +30,7 @@ public class CormenConnectedComponentsFinder<V> implements Algorithm<V> {
     @Override
     public void run(V startValue) {
         // Executa DFS(G) para calcular os tempos finais de cada vértice no grafo
-        final CormenDFSAlgorithm<V> dfsAlgorithm = new CormenDFSAlgorithm<>(graph);
+        final DFSAlgorithm<V> dfsAlgorithm = new DFSAlgorithm<>(graph);
         dfsAlgorithm.run(startValue);
         final Graph<V> dfsGraph = dfsAlgorithm.getGraph();
 
@@ -37,7 +38,7 @@ public class CormenConnectedComponentsFinder<V> implements Algorithm<V> {
         final Graph<V> transposedGraph = new TransposedGraph<>(dfsGraph);
 
         // Executa DFS(G^T) considerando os vértices em ordem decrescente por tempos finais do grafo original
-        final CormenConnectedComponentsAlgorithm<V> ccAlgorithm = new CormenConnectedComponentsAlgorithm<>(transposedGraph);
+        final ConnectedComponentsAlgorithm<V> ccAlgorithm = new ConnectedComponentsAlgorithm<>(transposedGraph);
         final V higherBlackValue = dfsGraph.getValues().stream()
             .map(v -> ((CormenNode<V>) dfsGraph.getNode(v)))
             .max(Comparator.comparingInt(CormenNode::getBlackValue))

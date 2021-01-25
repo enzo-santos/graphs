@@ -1,4 +1,4 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Graph;
 
@@ -12,19 +12,19 @@ import java.util.*;
  *
  * @param <V> o tipo do conteúdo a ser armazenado nos vértices a serem visitados.
  */
-public class CormenConnectedComponentsAlgorithm<V> extends CormenDFSAlgorithm<V> {
+class ConnectedComponentsAlgorithm<V> extends DFSAlgorithm<V> {
     private LinkedList<Set<V>> connectedComponents = new LinkedList<>();
 
     private final Graph<V> originalGraph;
 
     /**
-     * Constrói um algoritmo DFS por Cormen et. al. que encontra componentes conectados.
+     * Constrói um algoritmo DFS por Cormen et al. que encontra componentes conectados.
      *
      * @param graph o grafo no qual esse algoritmo será executado. Os vértices desse grafo devem
      *              ser do tipo {@link CormenNode}, visto que é preciso conhecer os tempos finais
      *              de cada vértice para percorrê-los.
      */
-    public CormenConnectedComponentsAlgorithm(final Graph<V> graph) {
+    public ConnectedComponentsAlgorithm(final Graph<V> graph) {
         super(graph);
         originalGraph = graph;
     }

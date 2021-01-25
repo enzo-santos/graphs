@@ -1,8 +1,9 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.DirectedGraph;
 import br.ufpa.icen.enzosantos.Graph;
 import br.ufpa.icen.enzosantos.ListGraph;
+import br.ufpa.icen.enzosantos.algs.cormen.TopologicalSortAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -13,7 +14,7 @@ import java.util.stream.Collectors;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CormenTopologicalSortAlgorithmTest {
+class TopologicalSortAlgorithmTest {
     /**
      * Source: https://www.cs.fsu.edu/~burmeste/slideshow/images_content/figure23_7.gif
      */
@@ -45,7 +46,7 @@ class CormenTopologicalSortAlgorithmTest {
         graph.addEdge("H", "I");
         graph.addEdge("C", "C");
 
-        final CormenTopologicalSortAlgorithm<String> algorithm = new CormenTopologicalSortAlgorithm<>(graph);
+        final TopologicalSortAlgorithm<String> algorithm = new TopologicalSortAlgorithm<>(graph);
         assertThrows(IllegalStateException.class, algorithm::getSortedValues);
 
         algorithm.run("F");

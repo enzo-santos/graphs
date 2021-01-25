@@ -1,8 +1,10 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Graph;
 import br.ufpa.icen.enzosantos.ListGraph;
 import br.ufpa.icen.enzosantos.UndirectedGraph;
+import br.ufpa.icen.enzosantos.algs.cormen.BFSAlgorithm;
+import br.ufpa.icen.enzosantos.algs.cormen.CormenNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -11,7 +13,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class CormenBFSAlgorithmTest {
+class BFSAlgorithmTest {
     /**
      * Source: https://rusyasoft.github.io/assets/images/graphs/BFS_cormen_stepbystep_process.png
      */
@@ -32,7 +34,7 @@ class CormenBFSAlgorithmTest {
         graph.addEdge("w", "x");
         graph.addEdge("x", "y");
 
-        final CormenBFSAlgorithm<String> bfs = new CormenBFSAlgorithm<>(graph);
+        final BFSAlgorithm<String> bfs = new BFSAlgorithm<>(graph);
         bfs.run("s");
 
         final Graph<String> bfsGraph = bfs.getGraph();

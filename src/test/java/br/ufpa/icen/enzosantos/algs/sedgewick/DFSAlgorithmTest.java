@@ -1,8 +1,9 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.sedgewick;
 
 import br.ufpa.icen.enzosantos.Graph;
 import br.ufpa.icen.enzosantos.ListGraph;
 import br.ufpa.icen.enzosantos.UndirectedGraph;
+import br.ufpa.icen.enzosantos.algs.sedgewick.DFSAlgorithm;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
@@ -10,7 +11,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class SedgewickDFSAlgorithmTest {
+class DFSAlgorithmTest {
     @Test
     void run() {
         final Graph<String> graph = new UndirectedGraph<>(
@@ -26,7 +27,7 @@ class SedgewickDFSAlgorithmTest {
         graph.addEdge("d", "e");
         graph.addEdge("d", "f");
 
-        final SedgewickDFSAlgorithm<String> dfs = new SedgewickDFSAlgorithm<>(graph);
+        final DFSAlgorithm<String> dfs = new DFSAlgorithm<>(graph);
         assertThrows(IllegalStateException.class, dfs::getCount);
         dfs.run("a");
         assertEquals(6, dfs.getCount());

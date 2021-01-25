@@ -1,6 +1,7 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.sedgewick;
 
 import br.ufpa.icen.enzosantos.Graph;
+import br.ufpa.icen.enzosantos.algs.NodeVisitorAlgorithm;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -10,7 +11,7 @@ import java.util.Map;
  *
  * @param <V> o tipo do conteúdo a ser armazenado nos vértices a serem visitados.
  */
-public class SedgewickDFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
+public class DFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
     /**
      * Monitora os vértices que já foram visitados.
      */
@@ -26,7 +27,7 @@ public class SedgewickDFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
      *
      * @param graph o grafo no qual o algoritmo será aplicado.
      */
-    public SedgewickDFSAlgorithm(final Graph<V> graph) {
+    public DFSAlgorithm(final Graph<V> graph) {
         super(graph);
     }
 

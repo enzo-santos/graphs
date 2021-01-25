@@ -1,26 +1,27 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Graph;
+import br.ufpa.icen.enzosantos.algs.NodeVisitorAlgorithm;
 
 import java.util.Optional;
 
 /**
- * Representa um algoritmo Depth-First-Search por Cormen et. al.
+ * Representa um algoritmo Depth-First-Search por Cormen et al.
  *
  * @param <V> o tipo do conteúdo a ser armazenado nos vértices a serem visitados.
  */
-public class CormenDFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
+public class DFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
     /**
      * O tempo atual no contexto do algoritmo.
      */
     protected int time = 0;
 
     /**
-     * Constrói um algoritmo DFS por Cormen et. al. baseado em um grafo.
+     * Constrói um algoritmo DFS por Cormen et al. baseado em um grafo.
      *
      * @param graph o grafo no qual esse algoritmo será aplicado.
      */
-    public CormenDFSAlgorithm(final Graph<V> graph) {
+    public DFSAlgorithm(final Graph<V> graph) {
         super(CormenGraph.transform(graph));
     }
 

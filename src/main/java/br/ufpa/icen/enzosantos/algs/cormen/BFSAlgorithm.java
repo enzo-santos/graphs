@@ -1,21 +1,22 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Graph;
+import br.ufpa.icen.enzosantos.algs.NodeVisitorAlgorithm;
 
 import java.util.LinkedList;
 
 /**
- * Representa um algoritmo Breadth-First-Search por Cormen et. al.
+ * Representa um algoritmo Breadth-First-Search por Cormen et al.
  *
  * @param <V> o tipo do conteúdo a ser armazenado nos vértices a serem visitados.
  */
-public class CormenBFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
+public class BFSAlgorithm<V> extends NodeVisitorAlgorithm<V> {
     /**
      * Constrói um algoritmo BFS por Cormen et al.
      *
      * @param graph o grafo no qual esse algoritmo atuará.
      */
-    public CormenBFSAlgorithm(final Graph<V> graph) {
+    public BFSAlgorithm(final Graph<V> graph) {
         super(CormenGraph.transform(graph));
     }
 

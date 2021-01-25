@@ -1,4 +1,4 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Graph;
 
@@ -10,15 +10,15 @@ import java.util.List;
  *
  * @param <V> o tipo do conteúdo a ser armazenado nos vértices a serem visitados.
  */
-public class CormenTopologicalSortAlgorithm<V> extends CormenDFSAlgorithm<V> {
+public class TopologicalSortAlgorithm<V> extends DFSAlgorithm<V> {
     private List<V> sortedValues;
 
     /**
-     * Constrói um algoritmo DFS por Cormen et. al. que ordena os vértices de um grafo.
+     * Constrói um algoritmo DFS por Cormen et al. que ordena os vértices de um grafo.
      *
      * @param graph o grafo no qual esse algoritmo será executado.
      */
-    public CormenTopologicalSortAlgorithm(Graph<V> graph) {
+    public TopologicalSortAlgorithm(Graph<V> graph) {
         super(graph);
     }
 

@@ -1,16 +1,16 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Node;
 
 /**
- * Representa um vértice a ser utilizado por algoritmos baseados em Cormen et. al.
+ * Representa um vértice a ser utilizado por algoritmos baseados em Cormen et al.
  * <p>
  * Esse vértice contém informações como a cor do vértice, o vértice anterior, o tempo de quando o vértice foi descoberta
  * e colorida como cinza e o tempo de quando o vértice é colorida como preta e a busca é finalizada.
  *
  * @param <V> o tipo do conteúdo a ser armazenado nesse vértice.
  */
-class CormenNode<V> extends Node<V> {
+public class CormenNode<V> extends Node<V> {
     private enum Color {black, white, gray}
 
     /**

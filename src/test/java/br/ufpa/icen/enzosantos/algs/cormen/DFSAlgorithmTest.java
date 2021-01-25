@@ -1,8 +1,10 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.DirectedGraph;
 import br.ufpa.icen.enzosantos.Graph;
 import br.ufpa.icen.enzosantos.ListGraph;
+import br.ufpa.icen.enzosantos.algs.cormen.DFSAlgorithm;
+import br.ufpa.icen.enzosantos.algs.cormen.CormenNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.Map;
@@ -11,7 +13,7 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-class CormenDFSAlgorithmTest {
+class DFSAlgorithmTest {
     /**
      * Source: https://slideplayer.com/slide/12424750/74/images/16/Depth+first+search+%E2%80%93+example.jpg
      */
@@ -30,7 +32,7 @@ class CormenDFSAlgorithmTest {
         graph.addEdge("y", "x");
         graph.addEdge("z", "z");
 
-        final CormenDFSAlgorithm<String> dfs = new CormenDFSAlgorithm<>(graph);
+        final DFSAlgorithm<String> dfs = new DFSAlgorithm<>(graph);
         dfs.run("u");
         final Graph<String> dfsGraph = dfs.getGraph();
         final Map<String, CormenNode<String>> map = dfsGraph.getValues().stream()

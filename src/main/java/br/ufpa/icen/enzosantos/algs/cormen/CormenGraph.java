@@ -1,4 +1,4 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.Graph;
 import br.ufpa.icen.enzosantos.ListGraph;

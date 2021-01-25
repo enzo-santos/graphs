@@ -1,8 +1,9 @@
-package br.ufpa.icen.enzosantos.algs;
+package br.ufpa.icen.enzosantos.algs.cormen;
 
 import br.ufpa.icen.enzosantos.DirectedGraph;
 import br.ufpa.icen.enzosantos.Graph;
 import br.ufpa.icen.enzosantos.ListGraph;
+import br.ufpa.icen.enzosantos.algs.cormen.ConnectedComponentsFinder;
 import org.junit.jupiter.api.Test;
 
 import java.util.List;
@@ -11,7 +12,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class CormenConnectedComponentsFinderTest {
+class ConnectedComponentsFinderTest {
     /**
      * Source: http://www2.hawaii.edu/~suthers/courses/ics311f20/Notes/Topic-14/Fig-22-9-SCC-by-DFS-a.jpg
      */
@@ -35,8 +36,8 @@ class CormenConnectedComponentsFinderTest {
         graph.addEdge("g", "h");
         graph.addEdge("h", "h");
 
-        final CormenConnectedComponentsFinder<String> finder;
-        finder = new CormenConnectedComponentsFinder<>(graph);
+        final ConnectedComponentsFinder<String> finder;
+        finder = new ConnectedComponentsFinder<>(graph);
         assertThrows(IllegalStateException.class, finder::getConnectedComponents);
         finder.run("c");
         final List<Set<String>> actualList = finder.getConnectedComponents();
@@ -72,8 +73,8 @@ class CormenConnectedComponentsFinderTest {
         graph.addEdge("i", "h");
         graph.addEdge("j", "c");
 
-        final CormenConnectedComponentsFinder<String> finder;
-        finder = new CormenConnectedComponentsFinder<>(graph);
+        final ConnectedComponentsFinder<String> finder;
+        finder = new ConnectedComponentsFinder<>(graph);
         finder.run("a");
 
         List<Set<String>> actualList = finder.getConnectedComponents();
