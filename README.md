@@ -31,6 +31,8 @@ Implementação de alguns algoritmos de teoria de grafos.
  - [x] Strongly-connected-components search (Cormen et al.)
  
  - [x] Topological sort (Cormen et al.)
+
+ - [x] Kruskal's algorithm (Cormen et al.)
  
 ## Uso
 
